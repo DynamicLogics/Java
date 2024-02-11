@@ -1,0 +1,48 @@
+package connectivity;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import java.util.*;
+
+public class UserInput
+{
+	public static void main(String[] args) throws ClassNotFoundException, SQLException
+	{
+		Scanner scan=new Scanner(System.in);
+		int a[]=new int[3];
+		
+		String empno=scan.next();
+		String ename=scan.next();
+		String salary=scan.next();
+		String department=scan.next();
+		
+		Class.forName("org.postgresql.Driver");
+		Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","cdac123");
+		Statement statement = connection.createStatement();
+		
+		//for(int i=0;i<a.length;i++)
+		//{
+		String query="insert into employee values("+empno+","+"'"+ename+"'"+","+salary+","+"'"+department+"'"+")";
+		int value = statement.executeUpdate(query);
+		//if (value>0)
+			System.out.println("Record Inserted...");
+		//}  
+		
+		/*while(resultset.next())
+		{
+			System.out.println(resultset.getInt(1));
+			System.out.println(resultset.getString(2));
+			System.out.println(resultset.getInt(3));
+			System.out.println(resultset.getString(4));
+		}*/
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,67 @@
+package Teacher_1;
+
+public class TeacherClass
+{
+ private int id;
+ private String name;
+ private String in_time;
+ private String out_time;
+
+ public TeacherClass()
+ {
+	 
+ }
+ 
+ public int setid(int id1)
+ {
+	 id = id1;
+	 return id;
+ }
+ 
+ public String setname(String n)
+ {
+	 name = n;
+	 return name;
+ }
+ 
+ public String setin_time(String in)
+ {
+	 in_time = in;
+	 return in_time;
+ }
+ 
+ public String setout_time(String out)
+ {
+	 out_time = out;
+	 return out_time;
+ } 
+ 
+ 
+ public int getid()
+ {
+	 //System.out.println("ID:"+id);
+	 return id;
+ }
+ 
+ public String getname()
+ {
+	 //System.out.println("Name:"+name);
+	 return name;
+ }
+ 
+ public String getin_time()
+ {
+	 //System.out.println("IN:"+in_time);
+	 return in_time;
+ }
+ 
+ public String getout_time()
+ {
+	 //System.out.println("OUT:"+out_time);
+	 return out_time;
+ } 
+ 
+ 
+ 
+ 
+}

@@ -1,0 +1,27 @@
+encrypted password:
+$2a$08$fL7u5xcvsZl78su29x1ti.dxI.9rYO8t0q5wk2ROJ.1cdR53bmaVG
+
+private String clientId = "ssa";
+private String clientSecret = "ssa-secret-key";
+
+grant_type: password
+username: shubham
+password: password
+
+post url: 
+http://localhost:8080/oauth/token
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzM1NDYxOTMsInVzZXJfbmFtZSI6InNodWJoYW0iLCJhdXRob3JpdGllcyI6WyJST0xFX1NZU1RFTUFETUlOIl0sImp0aSI6IjkyOGQ5N2MxLTEyYmYtNGM1Yi1iZGNlLTFmNDY5OWYzMjQ2NSIsImNsaWVudF9pZCI6InNzYSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.UrgkPsx0yjvpbQi_46ikVpEUVvIPGs8bG-nuJR59iMe3pUvFyA_JBI2_9mGx9LepUA8Qx5u4qKLhFxs3SJP0ox6qMerIUIVPHgvwwviNDNENLR6AVl6DD7x6xvlkmMQFdX32VKnPyCp8UokRT4P2OW7uqpV6NUitVcbNYJsE-gLYnWxjVh_svYdSvlV3yFFzGxf3kDDTxYBc6K__nVTBmNYUKrcWzoeYcDQjDHES-sVVrQD9nnj5NFDAvIuwgzCdv0hQJdYVXFBkgbT09GJ3LLNd1Oc8F-7tfYMJJDpurOphIuJbnQt0pPZDkQtlr6W8qs9ybSbNsP7zh3iZgL8EwA",
+    "token_type": "bearer",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJzaHViaGFtIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6IjkyOGQ5N2MxLTEyYmYtNGM1Yi1iZGNlLTFmNDY5OWYzMjQ2NSIsImV4cCI6MTY3MzU0NjE5MywiYXV0aG9yaXRpZXMiOlsiUk9MRV9TWVNURU1BRE1JTiJdLCJqdGkiOiI3NGE1ZjgyNC0zNGQxLTRmN2MtYmI0Zi00NTExMzY4MmE1OTIiLCJjbGllbnRfaWQiOiJzc2EifQ.YYbUAC9jdUTGmghotxLumtDM3aMRWQOqo8OOZBzYYGiuGlYC8I0NFjsS436s-L0y9NAMbJvCVx8CHsTQ6wrR-f3i7NAr8J5giuUHr2M1KNmUlbSc6YGQFvqWfS6o8TazzhPQM48avQdB1DzMXuXpDyoHtUKzcTbh3KRmlHLq_Dxpbvg3I9jc4khpBO7sBtTZAQSqAkPmTpNe-uYwJeVKOdRyMVeztolkMG-JtgAiGtBHdtUYz0vl58ovk2NvCVY9lvqCmSE6ZCvCZw5waEp8FcXK6VCJYUBdC-P_IbvRWiLXua65FH1XZFui9eU10rwY2nj8jO9hdnw1kLmju0kwHA",
+    "expires_in": 19999,
+    "scope": "read write",
+    "jti": "928d97c1-12bf-4c5b-bdce-1f4699f32465"
+}
+
+Content-Type:  application/json
+Authorization: Bearer "access_token" 
+
+get url: 
+http://localhost:8080/enter/home

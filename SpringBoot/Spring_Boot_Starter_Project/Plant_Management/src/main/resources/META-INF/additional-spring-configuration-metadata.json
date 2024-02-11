@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "app.api.swagger.enable",
+    "type": "java.lang.String",
+    "description": "A description for 'app.api.swagger.enable'"
+  },
+  {
+    "name": "springdoc.swagger-ui.disable-swagger-default-url",
+    "type": "java.lang.String",
+    "description": "A description for 'springdoc.swagger-ui.disable-swagger-default-url'"
+  },
+  {
+    "name": "swagger.host.url",
+    "type": "java.lang.String",
+    "description": "A description for 'swagger.host.url'"
+  },
+  {
+    "name": "management.endpoints.web.exposure.include",
+    "type": "java.lang.String",
+    "description": "A description for 'management.endpoints.web.exposure.include'"
+  }
+]}

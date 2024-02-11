@@ -1,0 +1,14 @@
+#Don't use tab while declaring property variables use always spaces
+spring:
+   profiles:
+      active: dev
+   application:
+      name: Profiles
+   mvc:
+      pathmatch:
+         matching-strategy: ANT_PATH_MATCHER
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"

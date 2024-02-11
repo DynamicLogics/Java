@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+F:\Java All\SPRING\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1042854980.index
+\StudentDetails\src
+F:\Java All\SPRING\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3560486601.index
+\Sprinh_Html_Forms\src
+F:\Java All\SPRING\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3306854068.index
+\StudentDetails\src
+F:\Java All\SPRING\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\237508677.index
+\spring-mvc-demo\src
+F:\Java All\SPRING\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4163380366.index
+\Spring_Html_Forms\src

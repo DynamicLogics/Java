@@ -1,0 +1,13 @@
+-> scope refers to lifecycle of bean
+-> how long does bean live?
+-> how many instance(objects) are created
+-> how is bean shared?
+
+by default bean lifecycle is 'singleton', here if we create two object to same bean
+then second bean will refer to first object i.e., no separate object is created.
+
+if scope is declared as 'prototype' then two different objects are created of same bean are created 
+if the same bean is declared twice.
+
+'@Scope("singleton") or @Scope("prototype")' is used to declare scope of an bean
+

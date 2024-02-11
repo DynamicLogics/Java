@@ -1,0 +1,41 @@
+package connectivity;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import java.util.*;
+
+public class MultipleRecords
+{
+	public static void main(String[] args) throws ClassNotFoundException, SQLException
+	{
+		int empno=5;
+		Scanner scan=new Scanner(System.in);
+
+		Class.forName("org.postgresql.Driver");
+		Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","cdac123");
+		Statement statement = connection.createStatement();
+		
+		System.out.println("How Many Records...");
+		int cnt = Integer.parseInt(scan.next());
+		
+		for(int i=0;i<cnt;i++)
+		{
+			empno++;
+			System.out.println("Enter Name");
+			String ename=scan.next();
+			System.out.println("Enter salary");
+			String salary=scan.next();
+			System.out.println("Enter department");
+			String department=scan.next();				
+				
+		String query="insert into employee values("+empno+",'"+ename+"',"+salary+",'"+department+"')";
+		int value = statement.executeUpdate(query);
+		if (value>0)
+			System.out.println("Record Inserted...");
+		}  	
+	}
+}

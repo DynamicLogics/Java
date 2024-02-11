@@ -1,0 +1,27 @@
+Captcha API:
+http://localhost:8080/captcha/captchaOnRequest
+http://localhost:8080/captcha/captchaOnPageLoad
+
+Login API:
+http://localhost:8080/authorization/login
+http://localhost:8080/authorization/loginVerification?userName=suraj&password=suaraj@*123
+
+OTP API:
+http://localhost:8080/authorization/sendOtp?userName=suraj&password=suraj@*123
+
+Verify OTP:
+http://localhost:8080/authorization/verifyOtp?otpNumber=1488&userId=2000
+
+Employee  API:
+http://localhost:8080/employee/addEmployee
+
+http://localhost:8080/employee/removeEmployeeRecord?userId=8000
+
+http://localhost:8080/employee/generateEmployeeRecord?userId=8000
+
+http://localhost:8080/employee/fetchEmployeeRecord?userId=4000
+
+ajay ajay@*123
+
+E:\Programming\Java\SpringBoot 
+

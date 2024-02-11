@@ -1,0 +1,80 @@
+package Teacher_1;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.*;
+
+public class TeacherMain
+{
+	
+	public static void main(String[] args) throws Exception 
+	{
+		Scanner scan1 = new Scanner(System.in);
+		int choice = Integer.parseInt(scan1.next());
+		
+		while(choice!=3)
+		{
+
+			System.out.println("1-> Enter Attendance");
+			System.out.println("2-> See teacher's Attendance Record");
+			System.out.println("3-> Exit");
+			
+		switch(choice)
+		{
+			
+		case 1: System.out.println("Teacher Entry");
+				
+				TeacherClass t1 = new TeacherClass(); 
+				Scanner scan = new Scanner(System.in);
+				System.out.println("Enter your id");
+				int id1 = Integer.parseInt(scan.next());
+				
+				System.out.println("Enter your name");
+				String name1 = scan.next();
+				
+				System.out.println("Enter your in_time");
+				String in_time1 =scan.next();
+				
+				System.out.println("Enter your out_time");
+				String out_time1 = scan.next();
+				
+				Connection connection = DataBase_1.getconnectivity();
+				String query = "insert into Teacher"+"(id1,name1,in_time1,out_time1) values"+"(?,?,?,?)"; 
+				PreparedStatement ps = connection.prepareStatement(query);
+				
+				ps.setInt (1,t1.setid(id1));
+				ps.setString(2,t1.setname(name1));
+				ps.setString(3,t1.setin_time(in_time1));
+				ps.setString(4,t1.setout_time(out_time1));
+				
+				ps.executeUpdate(query);
+				//TeacherDetails t1 = new TeacherDetails(name,in_time,out_time,id,_principal_login);
+				break;			
+				
+
+		case 2:System.out.println("Principal Login");
+				TeacherClass t2 = new TeacherClass();
+				
+				Scanner scan3 = new Scanner(System.in);
+				System.out.println("Enter the teacher id");
+				
+				int id2 = Integer.parseInt(scan3.next());
+				
+				Connection connection1 = DataBase_1.getconnectivity();
+				String query1 = "select * from TeacherDetails where id like='id2'"; 
+				PreparedStatement ps1 = connection1.prepareStatement(query1);
+				int value1 = ps1.executeUpdate();
+			  
+				if(value1>0)
+				{
+				   System.out.println("Record Shown");
+				}
+				else
+				{
+				   System.out.println("Error while showing record");
+				}
+			   
+				break;
+		}
+		}
+	}
+}

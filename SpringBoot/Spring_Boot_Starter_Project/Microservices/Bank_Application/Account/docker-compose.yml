@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+
+    accounts:
+        image: ssadoc123/849765e33b35
+        mem_limit: 700m
+        ports:
+          - "8083:8083"
+        networks:
+          - ssa-network  
+        
+    loans:    
+        image: ssadoc123/89fccaa07186
+        mem_limit: 700m
+        ports:
+          - "8084:8084"
+        networks:
+          - ssa-network  
+
+    cards:    
+        image: ssadoc123/f39d079b81fb
+        mem_limit: 700m
+        ports:
+          - "8085:8085"
+        networks:
+          - ssa-network  
+
+networks:
+    ssa-network: {}
+
+

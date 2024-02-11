@@ -1,0 +1,61 @@
+#setting configuration for H2 database
+spring:
+   datasource:
+      #url: jdbc:h2:~/testdb
+      url: jdbc:h2:tcp://localhost:9090/~/testdb
+      driverClassName: org.h2.Driver
+      username: ssa
+      password: ssa
+      hikari:
+         poolName: Shubham-Connection-Pool     
+   jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      defer-datasource-initialization: true
+      hibernate.ddl-auto: update
+   h2:
+      console:
+         enabled: true
+         path: /h2-console
+         settings:
+          web-allow-others: true
+   application:
+      name: cards
+   profiles:
+      active: dev
+   config:
+      import: optional:configserver:http://localhost:8071   
+          
+server:
+  port: 8082 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  
+  info:
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+
+info:
+  application:
+    name: Cards Microservice
+    version: 1.0
+    description: bank application related microservice
+   
+#these are eureka serve related properties we need to add in our microservice
+eureka:
+  instance:
+    #it tells that we are preferring ip address
+    prefer-ip-address: true
+  client:
+    #it tells to register services of this microservice during startup with eureka server
+    register-with-eureka: true
+    #it tells the microservice to fetch all registery details present inside eureka server
+    fetch-registry: true
+    #it gives our microservice the eureka server location to connect with
+    service-url: 
+        defaultZone: http://localhost:8070/eureka/

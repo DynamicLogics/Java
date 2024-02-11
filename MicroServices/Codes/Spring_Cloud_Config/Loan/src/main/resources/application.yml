@@ -1,0 +1,36 @@
+#setting configuration for H2 database
+spring:
+   datasource:
+      url: jdbc:h2:~/testdb
+      driverClassName: org.h2.Driver
+      username: ssa
+      password: ssa
+      hikari:
+         poolName: Shubham-Connection-Pool     
+   jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      defer-datasource-initialization: true
+      hibernate.ddl-auto: update
+   h2:
+      console:
+         enabled: true
+         path: /h2-console
+         settings:
+          web-allow-others: true
+   application:
+   #this is the properties file name present inside Configuration-Server gothub repo 'spring-config-property-files' as 
+   #loans, loans-dev, loans-prod
+      name: loans
+   profiles:
+      active: prod
+   config:
+      import: optional:configserver:http://localhost:8071          
+
+#server:
+#  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

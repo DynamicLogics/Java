@@ -1,0 +1,17 @@
+package Teacher_1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DataBase_1
+{
+
+	public static Connection getconnectivity() throws Exception
+	{
+		Class.forName("org.postgresql.Driver");
+		Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","cdac123");
+		return connection;
+
+	}
+
+}

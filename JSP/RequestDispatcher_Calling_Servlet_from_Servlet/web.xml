@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>DemoWebProject</display-name>
+<!-- Mapping Servlet with URL names -->
+<servlet>
+	<servlet-name>Addition of Numbers</servlet-name>
+	<servlet-class>com.wepApp.AddServlet</servlet-class>
+</servlet>
+<!-- Mapping URL with Servlet names -->
+<servlet-mapping>
+	<servlet-name>Addition of Numbers</servlet-name>
+	<!-- Here when the URL will hit the below link then the associated servlet with it will get called -->
+	<url-pattern>/addNumbers</url-pattern>
+</servlet-mapping>
+
+<!-- Mapping Servlet with URL names -->
+<servlet>
+	<servlet-name>Subtraction of Numbers</servlet-name>
+	<servlet-class>com.wepApp.MinusServlet</servlet-class>
+</servlet>
+<!-- Mapping URL with Servlet names -->
+<servlet-mapping>
+	<servlet-name>Subtraction of Numbers</servlet-name>
+	<!-- Here when the URL will hit the below link then the associated servlet with it will get called -->
+	<url-pattern>/minusNumbers</url-pattern>
+</servlet-mapping>
+</web-app> 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>JSP</display-name>
+
+<!-- Mapping Servlet with URL names -->
+<servlet>
+	<servlet-name>Servlet Context</servlet-name>
+	<servlet-class>com.wepApp.Servlet_Context</servlet-class>
+</servlet>
+
+<!-- Mapping URL with Servlet names -->
+<servlet-mapping>
+	<servlet-name>Servlet Context</servlet-name>
+	<!-- Here when the URL will hit the below link then the associated servlet with it will get called -->
+	<url-pattern>/servletContext</url-pattern>
+</servlet-mapping>
+
+<context-param>
+	<param-name>name</param-name>
+	<param-value>Shubham</param-value>
+</context-param>
+
+<context-param>
+	<param-name>nationality</param-name>
+	<param-value>Indian</param-value>
+</context-param>
+
+
+<!-- Mapping Servlet with URL names -->
+<servlet>
+	<servlet-name>Servlet Config</servlet-name>
+	<servlet-class>com.wepApp.Servlet_Config</servlet-class>
+	
+	<init-param>
+		<param-name>name</param-name>
+		<param-value>ShubhamA</param-value>
+	</init-param>
+</servlet>
+
+<!-- Mapping URL with Servlet names -->
+<servlet-mapping>
+	<servlet-name>Servlet Config</servlet-name>
+	<!-- Here when the URL will hit the below link then the associated servlet with it will get called -->
+	<url-pattern>/servletConfig</url-pattern>
+</servlet-mapping>
+
+</web-app> 

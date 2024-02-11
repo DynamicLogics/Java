@@ -1,0 +1,71 @@
+version: "3.8"
+
+services:
+    
+    configuration-server:
+        image: ssadoc123/configuration-server:2.0
+        mem_limit: 700m
+        ports:
+           - "8072:8071"
+        networks:
+           - ssa-network
+          
+    account:
+        image: ssadoc123/account:2.0
+        mem_limit: 700m
+        ports:
+          - "8081:8080"
+        networks:
+          - ssa-network  
+        depends_on:
+          - configuration-server
+        deploy:  
+          restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+        environment:
+          SPRING_PROFILES_ACTIVE: dev
+          SPRING_CONFIG_IMPORT: configserver:http://configuration-server:8071/
+        
+    loan:    
+        image: ssadoc123/loan:2.0
+        mem_limit: 700m
+        ports:
+          - "8082:8080"
+        networks:
+          - ssa-network  
+        depends_on:
+          - configuration-server
+        deploy:  
+          restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+        environment:
+          SPRING_PROFILES_ACTIVE: dev
+          SPRING_CONFIG_IMPORT: configserver:http://configuration-server:8071/
+
+    card:    
+        image: ssadoc123/card:2.0
+        mem_limit: 700m
+        ports:
+          - "8083:8080"
+        networks:
+          - ssa-network 
+        depends_on:
+          - configuration-server
+        deploy:  
+          restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+        environment:
+          SPRING_PROFILES_ACTIVE: dev
+          SPRING_CONFIG_IMPORT: configserver:http://configuration-server:8071/   
+
+networks:
+    ssa-network: {}

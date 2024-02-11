@@ -1,0 +1,8 @@
+#Tomcat publish data
+#Wed Apr 29 13:50:38 IST 2020
+org.eclipse.jst.jee.server\:/binary\:F\:\\Java\ All\\SPRING\\spring-mvc-demo\\WebContent\\WEB-INF\\lib\\spring-web-5.2.5.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.2.5.RELEASE-sources.jar
+org.eclipse.jst.jee.server\:/binary\:F\:\\Java\ All\\SPRING\\spring-mvc-demo\\WebContent\\WEB-INF\\lib\\spring-web-5.2.5.RELEASE.jar=WEB-INF/lib/spring-web-5.2.5.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:F\:\\Java\ All\\SPRING\\StudentDetails\\WebContent\\WEB-INF\\lib\\spring-web-5.2.5.RELEASE.jar=WEB-INF/lib/spring-web-5.2.5.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:F\:\\Java\ All\\SPRING\\Spring_Html_Forms\\WebContent\\WEB-INF\\lib\\spring-web-5.2.5.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.2.5.RELEASE-sources.jar
+org.eclipse.jst.jee.server\:/binary\:F\:\\Java\ All\\SPRING\\Spring_Html_Forms\\WebContent\\WEB-INF\\lib\\spring-web-5.2.5.RELEASE.jar=WEB-INF/lib/spring-web-5.2.5.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:F\:\\Java\ All\\SPRING\\StudentDetails\\WebContent\\WEB-INF\\lib\\spring-web-5.2.5.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.2.5.RELEASE-sources.jar

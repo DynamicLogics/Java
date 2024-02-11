@@ -1,0 +1,40 @@
+package connectivity;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import java.util.*;
+
+public class FindARecord
+{
+	public static void main(String[] args) throws ClassNotFoundException, SQLException
+	{
+
+		Scanner scan=new Scanner(System.in);
+
+		Class.forName("org.postgresql.Driver");
+		Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","cdac123");
+		Statement statement = connection.createStatement();
+		
+		
+		//int i = Integer.parseInt(scan.next());
+		
+		System.out.println("Enter the employee number:");
+		int empno = Integer.parseInt(scan.next());
+		String query="select * from employee where empno = '"+empno+"' ";
+		ResultSet resultset = statement.executeQuery(query);
+		
+		while( resultset.next())
+		{
+			System.out.println(resultset.getInt(1));
+			System.out.println(resultset.getString(2));
+			System.out.println(resultset.getInt(3));
+			System.out.println(resultset.getString(4));
+		}
+		
+		}  	
+	}
+

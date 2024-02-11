@@ -1,0 +1,2 @@
+This package contains demonstration related to ResourceNotFoundException in REST controller
+class

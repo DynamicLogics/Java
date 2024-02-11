@@ -1,0 +1,17 @@
+1] You can add custom codes during bean initialization
+-> calling custom business logic methods
+-> setting up handles to resources(db, sockets, file etc)
+
+2] You can add custom code during bean destruction
+-> calling custom business logic methods 
+-> cleaning up handles to resources(db, sockets, file etc)
+
+3] Development process:
+-> define your methods for init and destroy
+-> Add annotations: @PostConstruct and @PreDestroy
+
+4] Init: method configuration
+-> Code will execute after constructor and after injection of dependencies
+
+5] Destroy method configuration 
+-> Code will execute before bean is destroyed
